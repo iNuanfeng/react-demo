@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [count, setCount ] = useState(0)
+
+  useEffect(() => { document.title = count })
+
   return (
     <div className="App">
       <header className="App-header">
@@ -10,14 +14,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>count: { count }</p>
+        <button onClick={ () => { setCount(count + 1) } }>Click Add Count</button>
       </header>
     </div>
   );

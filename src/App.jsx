@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+// import Card from './dnd/Card'
+import Todo from './todo'
 
 function App() {
   const [count, setCount ] = useState(0)
@@ -9,6 +11,8 @@ function App() {
 
   return (
     <div className="App">
+      {/* <Card></Card> */}
+      <Todo></Todo>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
